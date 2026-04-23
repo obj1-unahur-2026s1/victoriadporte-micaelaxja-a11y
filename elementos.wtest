@@ -1,0 +1,39 @@
+import wollok.mirror.*
+import elementos.*
+import atletas.*
+
+
+describe "Probamos que los elementos nos saben decir su valor" {
+  test "La raqueta si victoria tiene 32 años,  vale 3000" {
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    assert.equals(3000, raqueta.valor(victoria))
+    
+}
+
+test "El valor de la raqueta si victorio tiene 22 años"{
+    assert.equals(2200, raqueta.valor(victoria))
+}
+
+test "El valor del traje de Judo, si victoria tiene 25 años"{
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    assert.equals(75, trajeDeJudo.valor(victoria))
+}
+
+test "El valor del palo de hockey, si victoria tiene 25 años"{
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    victoria.cumplirAños()
+    assert.equals(150, paloDeHockey.valor(victoria))
+}
+}

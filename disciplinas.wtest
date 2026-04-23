@@ -1,0 +1,47 @@
+import disciplina.*
+
+
+describe "Probamos que las disciplinas nos saben decir su presupuesto base" {
+
+//TENIS
+  test "Tenis al inicio vale 215" {
+
+    assert.equals(215, tenis.presupuestoBase())
+  }
+
+  test "Tenis si ahora tiene 10 hinchas, su presupuesto pasa a ser 230" {
+    tenis.cantidadDeHinchas(10)
+    assert.equals(230, tenis.presupuestoBase())
+  }
+
+  //JUDO
+
+  test "Judo al inicio tiene un presupuesto de: 480"{
+    assert.equals(480, judo.presupuestoBase())
+  }
+
+  test "Judo si ahora tiene 5 medallas, su presupuesto base es de :800" {
+    judo.sumarUnaMedalla()
+    judo.sumarUnaMedalla()
+    assert.equals(800, judo.presupuestoBase())
+    
+  }
+
+  //HOCKEY
+
+    test "hockey al inicio tiene un presupuesto de: 4000" {
+      assert.equals(4000, hockey.presupuestoBase())
+    }
+
+    test "A hockey se le suman 5 socios mas, entonces su presupuesto base es de 5000: "{
+      hockey.sumarSocio()
+      hockey.sumarSocio()
+      hockey.sumarSocio()
+      hockey.sumarSocio()
+      hockey.sumarSocio()
+      assert.equals(5000, hockey.presupuestoBase())
+    }
+
+
+
+}
